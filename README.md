@@ -19,6 +19,7 @@ Cílem úprav je navázání vykonávání skriptů, které ukládají cookies d
 
 ### 2. Nasazení GTM
 ```sh
+<head>
 <!-- Google Tag Manager -->
 <script>
     function addGTM(w, d, s, l, i) {
@@ -37,6 +38,7 @@ Cílem úprav je navázání vykonávání skriptů, které ukládají cookies d
     });
 </script>
 <!-- End Google Tag Manager -->
+</head>
 ```
 
 ### 3. Přesun skriptů do GTM - GA, Facebook pixel, Hotjar apod.
