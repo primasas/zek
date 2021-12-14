@@ -57,7 +57,7 @@ var pp_gemius_use_cmp = true;
 ### 6. Nasazení reklamní knihovny loader.js
 Inicializace reklamního systému je přes knihovnu loader.js, která je umístěna na konci kódu. Jednotlivé skripty se dále načítají jako async a defer.
 ```sh
-<script async  src="https://static.primacdn.cz/sas/[ WEBSITE ]/prod/loader.js?"></script>
+<script async  src="https://static.primacdn.cz/sas/[ WEBSITE ]/prod/loader.js"></script>
 ```
 
 #####  Autosalon
