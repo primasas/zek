@@ -1,4 +1,4 @@
-# Úprava skriptů a nasazení CMP na webu
+# ZEK - úprava skriptů a nasazení CMP
 
 Cílem úprav je navázání vykonávání skriptů, které ukládají cookies do prohlížeče, na základě nastavení souhlasů uživatelem. 
 
