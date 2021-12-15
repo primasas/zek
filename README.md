@@ -190,7 +190,7 @@ let isConsent = (function (){
         if(!callOnlyOne){
 
             callOnlyOne = true;
-            console.log('%c [ mam souhlas ] ','background:green;color:white;');
+            console.log('%c [ mam consent ] ','background:green;color:white;');
 
         }
     }
@@ -222,5 +222,6 @@ window.didomiOnReady.push(function (Didomi) {
 
     }
 });
+
 </script>
 ```
