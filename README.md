@@ -142,7 +142,7 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 | Ukládání a/nebo přístup k informacím v zařízení | cookies |
 | Základní nastavení reklamy  | select_basic_ads |
 | Výběr personalizovaného obsahu | select_personalized_ads |
-| Vytvoření profilu pro personalizovaný obsah | create_ads_profile |
+| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile |
 | Vytvoření profilu pro personalizovaný obsah | create_content_profile |
 | Výběr personalizovaného obsahu | select_personalized_content |
 | Měření výkonu reklamy | measure_ad_performance |
