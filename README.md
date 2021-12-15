@@ -137,7 +137,7 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 
 #### Učely
 
-| Doména | WEBSITE |
+| Účel | Hodnota |
 | ------ | ------ |
 | Ukládání a/nebo přístup k informacím v zařízení | cookies |
 | Základní nastavení reklamy  | select_basic_ads |
