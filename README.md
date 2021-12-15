@@ -129,6 +129,7 @@ Doporučené umístění je v patičce webu.
 ```
 
 ### Didomi API - čtení účelů
+Alternativní možnost řízení spouštní skriptů bez GTM a to přímo na základě signálů z CMP.
 
 #### API
 ```sh
@@ -160,6 +161,19 @@ window.didomiOnReady.push(function (Didomi) {
         // call script
 
     }
+});
+</script>
+```
+
+#### Příklad získání účelu při první návštěvě, kdy se čeká až na vyjádření
+```sh
+<script type="text/javascript">
+window.didomiEventListeners = window.didomiEventListeners || [];
+window.didomiEventListeners.push({
+  event: 'consent.changed',
+  listener: function (context) {
+    // The user consent status has changed
+  }
 });
 </script>
 ```
