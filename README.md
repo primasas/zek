@@ -127,3 +127,39 @@ Doporučené umístění je v patičce webu.
 ```sh
 <a href="javascript:void(0)" onclick="try{Didomi.notice.show();}catch (e) {}">Zobrazit CMP</a>
 ```
+
+### Didomi API = čtení účelů
+
+#### API
+```sh
+https://developers.didomi.io/cmp/web-sdk/reference/api
+```
+
+#### Učely
+
+| Doména | WEBSITE |
+| ------ | ------ |
+| Ukládání a/nebo přístup k informacím v zařízení | cookies |
+| Základní nastavení reklamy  | select_basic_ads |
+| Výběr personalizovaného obsahu | select_personalized_ads |
+| Vytvoření profilu pro personalizovaný obsah | create_ads_profile |
+| Vytvoření profilu pro personalizovaný obsah | create_content_profile |
+| Výběr personalizovaného obsahu | select_personalized_content |
+| Měření výkonu reklamy | measure_ad_performance |
+| Měření výkonu obsahu | measure_content_performance |
+| Používání výzkumu trhu pro získání poznatků o uživatelích | market_research |
+| Vývoj a zlepšování produktů | improve_products |
+
+#### Příklad získání účelu
+```sh
+<script type="text/javascript">
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) { 
+    if(Didomi.getUserConsentStatusForPurpose('cookies')){
+
+        // call script
+
+    }
+});
+</script>
+```
