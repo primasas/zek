@@ -165,7 +165,7 @@ window.didomiOnReady.push(function (Didomi) {
 </script>
 ```
 
-#### Příklad získání účelu při první návštěvě, kdy se čeká až na vyjádření
+#### Příklad navázání na změnu nastavení
 ```sh
 <script type="text/javascript">
 window.didomiEventListeners = window.didomiEventListeners || [];
@@ -174,6 +174,53 @@ window.didomiEventListeners.push({
   listener: function (context) {
     // The user consent status has changed
   }
+});
+</script>
+```
+
+
+
+#### Příklad volání pro první návštěvu a následně po již získaném souhlasu
+```sh
+<script type="text/javascript">
+
+let isConsent = (function (){
+    let callOnlyOne = false;
+    return function(){
+        if(!callOnlyOne){
+
+            callOnlyOne = true;
+            console.log('%c [ mam souhlas ] ','background:green;color:white;');
+
+        }
+    }
+})();
+
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) { 
+    if(Didomi.getUserConsentStatusForPurpose('cookies')){
+        
+        isConsent();
+
+    }else{
+
+        window.didomiEventListeners = window.didomiEventListeners || [];
+        window.didomiEventListeners.push({
+        event: 'consent.changed',
+        listener: function (context) {
+            if(Didomi.getUserConsentStatusForPurpose('cookies')){
+
+                isConsent();
+
+            }else{
+
+                console.log('%c [ nemam souhlas ] ','background:red;color:white;');
+                
+            }
+        }
+        });
+
+    }
 });
 </script>
 ```
