@@ -136,7 +136,7 @@ Alternativní možnost řízení spouštní skriptů bez GTM a to přímo na zá
 https://developers.didomi.io/cmp/web-sdk/reference/api
 ```
 
-#### Učely
+#### Účely
 
 | Účel | Hodnota |
 | ------ | ------ |
