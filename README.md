@@ -128,7 +128,7 @@ Doporučené umístění je v patičce webu.
 <a href="javascript:void(0)" onclick="try{Didomi.notice.show();}catch (e) {}">Zobrazit CMP</a>
 ```
 
-### Didomi API = čtení účelů
+### Didomi API - čtení účelů
 
 #### API
 ```sh
