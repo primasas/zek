@@ -9,6 +9,7 @@ Cílem úprav je navázání vykonávání skriptů, které ukládají cookies d
 4. Nastavení pravidel spouštění podle souhlasů v GTM
 5. Přidání proměnné pro Gemius skript, který nastaví aby se řídil podle CMP
 6. Nasazení reklamní knihovny loader.js
+7. Přidání odkazu na zobrzení změny nastavení cookie do patičky
 
 ### 1. Nasazení CMP lišty do hlavičky
 ```sh
@@ -119,3 +120,10 @@ Inicializace reklamního systému je přes knihovnu loader.js, která je umíst�
 | zeny.iprima.cz | zeny |
 | zoom.iprima.cz | zoom |
 
+
+### 7. Přidání odkazu na zobrzení změny nastavení cookie
+Doporučené umístění je v patičce webu.
+
+```sh
+<a href="javascript:void(0)" onclick="try{Didomi.notice.show();}catch (e) {}">Zobrazit CMP</a>
+```
