@@ -40,6 +40,7 @@ Cílem úprav je navázání vykonávání skriptů, které ukládají cookies d
 <!-- End Google Tag Manager -->
 </head>
 ```
+*Nahradit dle příslušného webu: GTM-XXXXXXX*
 
 ### 3. Přesun skriptů do GTM - GA, Facebook pixel, Hotjar apod.
 Dodejte seznam skriptů, které na stránce používáte a bude nutné přesunout do GTM.
