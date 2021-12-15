@@ -121,7 +121,7 @@ Inicializace reklamního systému je přes knihovnu loader.js, která je umíst�
 | zoom.iprima.cz | zoom |
 
 
-### 7. Přidání odkazu na zobrzení změny nastavení cookies
+### 7. Přidání odkazu na zobrazení změny nastavení cookies
 Doporučené umístění je v patičce webu.
 
 ```sh
