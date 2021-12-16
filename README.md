@@ -138,18 +138,18 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 
 #### Účely
 
-| Účel | Hodnota |
+| Účel | Hodnota | Systém
 | ------ | ------ |
-| Ukládání a/nebo přístup k informacím v zařízení | cookies |
-| Základní nastavení reklamy  | select_basic_ads |
-| Výběr personalizovaného obsahu | select_personalized_ads |
-| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile |
-| Vytvoření profilu pro personalizovaný obsah | create_content_profile |
-| Výběr personalizovaného obsahu | select_personalized_content |
-| Měření výkonu reklamy | measure_ad_performance |
-| Měření výkonu obsahu | measure_content_performance |
-| Používání výzkumu trhu pro získání poznatků o uživatelích | market_research |
-| Vývoj a zlepšování produktů | improve_products |
+| Ukládání a/nebo přístup k informacím v zařízení | cookies | všechny |
+| Základní nastavení reklamy  | select_basic_ads | reklamní systémy
+| Výběr personalizovaného obsahu | select_personalized_ads | doporučovácí systémy - Recombee
+| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile | Facebook, a další sociální sítě
+| Vytvoření profilu pro personalizovaný obsah | create_content_profile | Recombee
+| Výběr personalizovaného obsahu | select_personalized_content | Recombee
+| Měření výkonu reklamy | measure_ad_performance | reklamní systémy
+| Měření výkonu obsahu | measure_content_performance | Google Analytics
+| Používání výzkumu trhu pro získání poznatků o uživatelích | market_research | offline data
+| Vývoj a zlepšování produktů | improve_products | Hotjar
 
 #### Příklad získání účelu
 ```sh
@@ -212,10 +212,6 @@ window.didomiOnReady.push(function (Didomi) {
 
                 isConsent();
 
-            }else{
-
-                console.log('%c [ nemam souhlas ] ','background:red;color:white;');
-                
             }
         }
         });
@@ -225,3 +221,111 @@ window.didomiOnReady.push(function (Didomi) {
 
 </script>
 ```
+
+#### Příklad Hotjar
+```sh
+<script type="text/javascript">
+
+let consentHotjar = (function (){
+    let callOnlyOne = false;
+    return function(){
+        if(!callOnlyOne){
+
+            callOnlyOne = true;
+            
+                (function(h,o,t,j,a,r){
+                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                    h._hjSettings={hjid:1682571,hjsv:6};
+                    a=o.getElementsByTagName('head')[0];
+                    r=o.createElement('script');r.async=1;
+                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                    a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+        }
+    }
+})();
+
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) { 
+    if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('improve_products')){
+        
+        consentHotjar();
+
+    }else{
+
+        window.didomiEventListeners = window.didomiEventListeners || [];
+        window.didomiEventListeners.push({
+        event: 'consent.changed',
+        listener: function (context) {
+            if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('cookies')){
+
+                consentHotjar();
+
+            }
+        }
+        });
+
+    }
+});
+
+</script>
+```sh
+
+#### Příklad Twitter
+```sh
+<script type="text/javascript">
+
+let consentTwitter = (function (){
+    let callOnlyOne = false;
+    return function(){
+        if(!callOnlyOne){
+
+            callOnlyOne = true;
+            
+            window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+
+                t._e = [];
+                t.ready = function(f) {
+                    t._e.push(f);
+                };
+
+                return t;
+            }(document, "script", "twitter-wjs"));
+
+        }
+    }
+})();
+
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) { 
+    if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('create_ads_profile')){
+        
+        consentTwitter();
+
+    }else{
+
+        window.didomiEventListeners = window.didomiEventListeners || [];
+        window.didomiEventListeners.push({
+        event: 'consent.changed',
+        listener: function (context) {
+            if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('create_ads_profile')){
+
+                consentTwitter();
+
+            }
+        }
+        });
+
+    }
+});
+
+</script>
+```sh
