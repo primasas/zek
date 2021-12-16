@@ -243,7 +243,7 @@ let consentHotjar = (function (){
             
                 (function(h,o,t,j,a,r){
                     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:1682571,hjsv:6};
+                    h._hjSettings={hjid: [ XXXXX ] ,hjsv:6};
                     a=o.getElementsByTagName('head')[0];
                     r=o.createElement('script');r.async=1;
                     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
@@ -325,6 +325,58 @@ window.didomiOnReady.push(function (Didomi) {
         event: 'consent.changed',
         listener: function (context) {
             if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('create_ads_profile')){
+
+                consentTwitter();
+
+            }
+        }
+        });
+
+    }
+});
+
+</script>
+```
+
+
+#### Příklad Google Analytics
+```sh
+<script type="text/javascript">
+
+let consentTwitter = (function (){
+    let callOnlyOne = false;
+    return function(){
+        if(!callOnlyOne){
+
+            callOnlyOne = true;
+            
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-XXXXXXXXX']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        }
+    }
+})();
+
+window.didomiOnReady = window.didomiOnReady || [];
+window.didomiOnReady.push(function (Didomi) { 
+    if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('measure_content_performance')){
+        
+        consentTwitter();
+
+    }else{
+
+        window.didomiEventListeners = window.didomiEventListeners || [];
+        window.didomiEventListeners.push({
+        event: 'consent.changed',
+        listener: function (context) {
+            if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('measure_content_performance')){
 
                 consentTwitter();
 
