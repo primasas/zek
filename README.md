@@ -143,7 +143,7 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 | Ukládání a/nebo přístup k informacím v zařízení | cookies | všechny |
 | Základní nastavení reklamy  | select_basic_ads | reklamní systémy |
 | Výběr personalizovaného obsahu | select_personalized_ads | doporučovácí systémy - Recombee |
-| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile | Facebook, a další sociální sítě |
+| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile | Facebook a další sociální sítě |
 | Vytvoření profilu pro personalizovaný obsah | create_content_profile | Recombee |
 | Výběr personalizovaného obsahu | select_personalized_content | Recombee |
 | Měření výkonu reklamy | measure_ad_performance | reklamní systémy |
@@ -270,7 +270,7 @@ window.didomiOnReady.push(function (Didomi) {
 });
 
 </script>
-```sh
+```
 
 #### Příklad Twitter
 ```sh
@@ -328,4 +328,4 @@ window.didomiOnReady.push(function (Didomi) {
 });
 
 </script>
-```sh
+```
