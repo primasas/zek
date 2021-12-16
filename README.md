@@ -138,8 +138,8 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 
 #### Účely
 
-| Účel | Hodnota | Systém
-| ------ | ------ |
+| Účel | Hodnota | Systém |
+| ------ | ------ | ------ |
 | Ukládání a/nebo přístup k informacím v zařízení | cookies | všechny |
 | Základní nastavení reklamy  | select_basic_ads | reklamní systémy |
 | Výběr personalizovaného obsahu | select_personalized_ads | doporučovácí systémy - Recombee |
