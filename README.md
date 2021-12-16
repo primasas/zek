@@ -181,6 +181,14 @@ window.didomiEventListeners.push({
 
 
 #### Příklad volání pro první návštěvu a následně po již získaném souhlasu
+
+###### Skript se ve funkci isConsent vykoná pouze 1x i při opakovaném volání, aby nedocházelo ke zdvojení volání při změně nastavení volby v CMP
+
+###### Souslednost kroků je následující:
+ - při první návštěvě nemáme od uživatele souhlas a proto je nastaven event na consent.changed, aby po vyjádření mohl být provedek podle souhlasů skript a tak jsme nepřišli o jeho první návštěvu.
+- při další návštěvě se již podle uděleného souhlasu volá skript 
+
+
 ```sh
 <script type="text/javascript">
 
