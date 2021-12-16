@@ -343,7 +343,7 @@ window.didomiOnReady.push(function (Didomi) {
 ```sh
 <script type="text/javascript">
 
-let consentTwitter = (function (){
+let consentGA = (function (){
     let callOnlyOne = false;
     return function(){
         if(!callOnlyOne){
@@ -368,7 +368,7 @@ window.didomiOnReady = window.didomiOnReady || [];
 window.didomiOnReady.push(function (Didomi) { 
     if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('measure_content_performance')){
         
-        consentTwitter();
+        consentGA();
 
     }else{
 
@@ -378,7 +378,7 @@ window.didomiOnReady.push(function (Didomi) {
         listener: function (context) {
             if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('measure_content_performance')){
 
-                consentTwitter();
+                consentGA();
 
             }
         }
