@@ -141,15 +141,15 @@ https://developers.didomi.io/cmp/web-sdk/reference/api
 | Účel | Hodnota | Systém
 | ------ | ------ |
 | Ukládání a/nebo přístup k informacím v zařízení | cookies | všechny |
-| Základní nastavení reklamy  | select_basic_ads | reklamní systémy
-| Výběr personalizovaného obsahu | select_personalized_ads | doporučovácí systémy - Recombee
-| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile | Facebook, a další sociální sítě
-| Vytvoření profilu pro personalizovaný obsah | create_content_profile | Recombee
-| Výběr personalizovaného obsahu | select_personalized_content | Recombee
-| Měření výkonu reklamy | measure_ad_performance | reklamní systémy
-| Měření výkonu obsahu | measure_content_performance | Google Analytics
-| Používání výzkumu trhu pro získání poznatků o uživatelích | market_research | offline data
-| Vývoj a zlepšování produktů | improve_products | Hotjar
+| Základní nastavení reklamy  | select_basic_ads | reklamní systémy |
+| Výběr personalizovaného obsahu | select_personalized_ads | doporučovácí systémy - Recombee |
+| Vytvoření profilu pro personalizovanou reklamu | create_ads_profile | Facebook, a další sociální sítě |
+| Vytvoření profilu pro personalizovaný obsah | create_content_profile | Recombee |
+| Výběr personalizovaného obsahu | select_personalized_content | Recombee |
+| Měření výkonu reklamy | measure_ad_performance | reklamní systémy |
+| Měření výkonu obsahu | measure_content_performance | Google Analytics |
+| Používání výzkumu trhu pro získání poznatků o uživatelích | market_research | offline data |
+| Vývoj a zlepšování produktů | improve_products | Hotjar |
 
 #### Příklad získání účelu
 ```sh
