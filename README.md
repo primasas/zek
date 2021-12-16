@@ -258,7 +258,7 @@ window.didomiOnReady.push(function (Didomi) {
         window.didomiEventListeners.push({
         event: 'consent.changed',
         listener: function (context) {
-            if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('cookies')){
+            if(Didomi.getUserConsentStatusForPurpose('cookies') && Didomi.getUserConsentStatusForPurpose('improve_products')){
 
                 consentHotjar();
 
