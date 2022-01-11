@@ -389,3 +389,15 @@ window.didomiOnReady.push(function (Didomi) {
 
 </script>
 ```
+
+#### Nastavení volání skriptů v GTM podle slouhlasů
+
+1. Vytvoření proměnné v GTM
+![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-variable.png)
+
+2. Vytvoření události Didomi
+![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-trigger.png)
+
+3. Přidání Triggeru do tagu
+![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-tag-triggering.png)
+
