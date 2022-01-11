@@ -390,7 +390,7 @@ window.didomiOnReady.push(function (Didomi) {
 </script>
 ```
 
-#### Nastavení volání skriptů v GTM podle slouhlasů
+### 8. Nastavení volání skriptů v GTM podle slouhlasů
 
 1. Vytvoření proměnné v GTM
 ![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-variable.png)
