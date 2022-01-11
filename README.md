@@ -392,12 +392,22 @@ window.didomiOnReady.push(function (Didomi) {
 
 ### 8. Nastavení volání skriptů v GTM podle slouhlasů
 
-1. Vytvoření proměnné v GTM
+#### 1. Vytvoření proměnné v GTM
+
+- Variable Type => Data Layer Variable => DidomiCookiesConsent
+
 ![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-variable.png)
 
-2. Vytvoření události Didomi
+
+#### 2. Vytvoření události Didomi
+
+- Triger Type => Costume Event => Enent name => didomi-cookies-consent 
+- Vytvoření souhlasu podle typu skriptu, který potřebuje
+
 ![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-trigger.png)
 
-3. Přidání Triggeru do tagu
+
+#### 3. Přidání Triggeru do tagu
+
 ![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-tag-triggering.png)
 
