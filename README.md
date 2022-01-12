@@ -401,7 +401,7 @@ window.didomiOnReady.push(function (Didomi) {
 
 #### 2. Vytvoření události Didomi
 
-- Triger Type => Costume Event => Enent name => didomi-cookies-consent 
+- Triger Type => Costume Event => Event name => didomi-cookies-consent 
 - Vytvoření souhlasu podle typu skriptu, který potřebuje
 
 ![](https://github.com/primasas/zek/blob/main/images/gtm-didomi-trigger.png)
