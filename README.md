@@ -14,7 +14,7 @@ Cílem úprav je navázání vykonávání skriptů, které ukládají cookies d
 ### 1. Nasazení CMP lišty do hlavičky
 ```sh
 <head>
-<script src="https://static.primacdn.cz/scripts/cmp/iprima-cmp.min.js?v2"></script>
+<script src="https://static.primacdn.cz/sas/cmp/iprima-cmp.js?v4"></script>
 </head>
 ```
 
